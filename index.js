@@ -1,7 +1,6 @@
 // create express instance
 const Express = require('express');  
 const app = new Express();
-const { json } =  require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -27,6 +26,6 @@ app.use('/books' , require('./routes/books'));
 // start server
 app.listen(PORT , function(err){
     if (!err) {
-        console.log('server started...');
+        console.log(`server started on port ${PORT}`);
     }
 }); 
